@@ -7,19 +7,20 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: 'Times New Roman', Times, serif; /* ক্লাসিক ফন্ট */
+            background-color: #f4f4f4;
+            color: #2c3e50;
         }
 
-        /* হোম সেকশন (প্রথমে শুধু এটিই দেখা যাবে) */
+        /* প্রফেশনাল ক্লাসিক হেডার */
         .home-section {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #4caf50, #f44336);
+            /* ক্লাসিক নেভি ব্লু গ্রেডিয়েন্ট */
+            background: linear-gradient(135deg, #1a2a6c, #2a4858); 
             color: white;
             text-align: center;
             padding: 20px;
@@ -27,83 +28,103 @@
 
         .home-section img {
             border-radius: 50%;
-            border: 6px solid white;
+            border: 4px solid #d4af37; /* সোনালী বর্ডার */
             width: 180px;
             height: 180px;
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* মেনু ডিজাইন */
+        .home-section h1 {
+            font-size: 42px;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4af37; /* গোল্ডেন কালার */
+        }
+
+        .home-section p {
+            font-size: 20px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* ক্লাসিক ডার্ক মেনু */
         nav {
-            background: #1a1a1a;
+            background: #111;
             padding: 15px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 2px solid #d4af37;
         }
 
         nav a {
-            color: #ddd;
-            margin: 0 12px;
+            color: #fff;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 16px;
             transition: 0.3s;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            color: #4caf50;
+            color: #d4af37;
         }
 
-        /* কন্টেন্ট কার্ড */
+        /* কার্ড ডিজাইন */
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             display: flex;
             justify-content: center;
         }
 
         .card {
             background: white;
-            padding: 30px;
-            max-width: 600px;
+            padding: 40px;
+            max-width: 650px;
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 5px; /* ক্লাসিক লুকের জন্য কম রাউন্ড */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             text-align: center;
+            border: 1px solid #ddd;
         }
 
-        /* বাটন ডিজাইন */
+        /* গোল্ডেন ক্লাসিক বাটন */
         .btn {
-            background: #fff;
-            color: #4caf50;
-            padding: 12px 30px;
-            border-radius: 50px;
+            background: #d4af37;
+            color: #1a2a6c;
+            padding: 15px 40px;
+            border-radius: 2px;
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
             transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            background: #f0f0f0;
+            background: #b8962e;
+            color: white;
+            transform: translateY(-3px);
         }
 
-        .contact-btn {
-            background: #25D366;
-            color: white;
+        .contact-info {
+            margin-top: 20px;
+            font-size: 18px;
         }
 
         footer {
             background: #111;
-            color: #888;
+            color: #666;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -113,29 +134,30 @@
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     <h1>Kawser Ahmed Joy</h1>
     <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    <p>“আপনার সেবায়, আপনার পাশে সবসময়”</p>
+    <p>“আস্থা ও উন্নয়নের অঙ্গীকার”</p>
     
-    <a href="promises.html" class="btn">আমার প্রতিশ্রুতি দেখুন</a>
+    <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
 </div>
 
 <nav>
     <a href="#home">হোম</a>
-    <a href="promises.html">আমার প্রতিশ্রুতি</a>
+    <a href="promises.html">প্রতিশ্রুতি</a>
     <a href="#contact">যোগাযোগ</a>
 </nav>
 
 <section id="contact">
     <div class="card">
-        <h2>📞 যোগাযোগ করুন</h2>
-        <p>মোবাইল: <a href="tel:01731168348" style="text-decoration:none; color:#006a4e; font-weight:bold;">01731168348</a></p>
-        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="text-decoration:none; color:#1877F2; font-weight:bold;">Kawser Uddin Joy</a></p>
-        <br>
-        <a href="https://wa.me/8801731168348" class="btn contact-btn" target="_blank">হোয়াটসঅ্যাপে মেসেজ দিন</a>
+        <h2 style="color: #1a2a6c;">📞 সরাসরি যোগাযোগ</h2>
+        <div class="contact-info">
+            <p>মোবাইল: <a href="tel:01731168348" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">01731168348</a></p>
+            <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Kawser Uddin Joy</a></p>
+        </div>
+        <a href="https://wa.me/8801731168348" class="btn" style="background: #1a2a6c; color: white;" target="_blank">হোয়াটসঅ্যাপ মেসেজ</a>
     </div>
 </section>
 
 <footer>
-    © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের উন্নয়নই লক্ষ্য
+    © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের উন্নয়ন ও সেবায় নিবেদিত
 </footer>
 
 </body>
