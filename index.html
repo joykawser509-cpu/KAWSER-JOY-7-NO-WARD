@@ -12,14 +12,15 @@
         
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         /* হেডার ডিজাইন */
         header {
             text-align: center; 
-            padding: 40px 20px; 
+            padding: 50px 20px; 
             background: linear-gradient(to right, #4caf50, #f44336); 
             color: white;
         }
@@ -27,74 +28,93 @@
         header img {
             border-radius: 50%; 
             margin-bottom: 15px;
-            border: 4px solid white; 
+            border: 5px solid white; 
+            width: 180px;
+            height: 180px;
             object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 36px;
+            margin: 10px 0;
+            font-size: 32px;
         }
 
         header p {
             font-size: 18px;
             margin: 5px 0;
+            opacity: 0.9;
         }
 
+        /* মেনু ডিজাইন */
         nav {
             background: #222;
-            padding: 10px;
+            padding: 12px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 14px;
         }
 
         nav a:hover {
             color: #4caf50;
         }
 
+        /* সেকশন ডিজাইন */
         section {
-            padding: 40px 20px;
-            text-align: center;
+            padding: 30px 15px;
+            max-width: 850px;
+            margin: 0 auto;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: #111;
-            color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-align: center;
-            padding: 15px;
         }
 
+        .card h2 {
+            color: #222;
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* যোগাযোগ বাটন */
         .btn {
             background: #006a4e;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             text-decoration: none;
             display: inline-block;
             margin-top: 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .btn:hover {
             background: #004d38;
+            transform: translateY(-2px);
         }
 
         .contact-link {
@@ -102,12 +122,20 @@
             color: #1877F2;
             font-weight: bold;
         }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
 <header id="home">
-    <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy" width="180" height="180">
+    <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     <h1>Kawser Ahmed Joy</h1>
     <p>7 No Ward Councilor Candidate</p>
     <p>আপনার সেবায়, আপনার পাশে</p>
@@ -115,5 +143,53 @@
 
 <nav>
     <a href="#home">হোম</a>
-    <a href="#about">আমার পরিচিতি</a>
+    <a href="#about">পরিচিতি</a>
     <a href="#vision">লক্ষ্য</a>
+    <a href="#plan">পরিকল্পনা</a>
+    <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<section>
+    <div class="card" id="about">
+        <h2>আমার পরিচিতি</h2>
+        <p>
+            আমি <strong>Kawser Ahmed Joy</strong>। ৭ নং ওয়ার্ডের একজন তরুণ সমাজসেবক। 
+            আমি বিশ্বাস করি তরুণ নেতৃত্বই পারে একটি সুন্দর ও আধুনিক ওয়ার্ড উপহার দিতে। 
+            আপনাদের দোয়া ও সমর্থনে আমি জনগণের অধিকার ও উন্নয়নের লক্ষ্যে কাজ করে যাচ্ছি।
+        </p>
+    </div>
+
+    <div class="card" id="vision">
+        <h2>আমার লক্ষ্য</h2>
+        <p>
+            ✔️ এলাকার নিরাপত্তা নিশ্চিত করা <br>
+            ✔️ উন্নত ড্রেনেজ ও রাস্তাঘাট নির্মাণ <br>
+            ✔️ মাদকমুক্ত ও সুদমুক্ত সমাজ গঠন <br>
+            ✔️ যুব সমাজকে দক্ষ করে গড়ে তোলা
+        </p>
+    </div>
+
+    <div class="card" id="plan">
+        <h2>উন্নয়ন পরিকল্পনা</h2>
+        <p>
+            আমাদের ৭ নং ওয়ার্ডকে একটি ডিজিটাল এবং আদর্শ ওয়ার্ড হিসেবে গড়ে তোলাই আমার মূল পরিকল্পনা। 
+            জনগণের প্রতিটি সমস্যার সমাধানে আমি ২৪ ঘণ্টা আপনাদের পাশে থাকব।
+        </p>
+    </div>
+
+    <div class="card" id="contact">
+        <h2>যোগাযোগ</h2>
+        <p>মোবাইল: <a href="tel:01731168348" class="contact-link" style="color:#006a4e;">01731168348</a></p>
+        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" class="contact-link">Kawser Uddin Joy</a></p>
+        
+        <br>
+        <a href="https://wa.me/8801731168348" class="btn" target="_blank" style="background:#25D366;">হোয়াটসঅ্যাপে মেসেজ দিন</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kawser Ahmed Joy | All Rights Reserved
+</footer>
+
+</body>
+</html>
