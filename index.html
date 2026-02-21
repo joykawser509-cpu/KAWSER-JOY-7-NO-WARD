@@ -5,34 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
-        body { margin: 0; font-family: 'Times New Roman', serif; background-color: #f4f4f4; color: #2c3e50; }
-        .home-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #1a2a6c, #2a4858); color: white; text-align: center; padding: 20px; }
-        .home-section img { border-radius: 50%; border: 4px solid #d4af37; width: 180px; height: 180px; object-fit: cover; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .home-section h1 { font-size: 42px; margin: 10px 0; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; }
-        
-        nav { background: #111; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #d4af37; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 16px; text-transform: uppercase; }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* উইনিক সিটি/পিপল ব্যাকগ্রাউন্ড হেডার */
+        .home-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1570126618983-dd752348ebf4?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* ব্যাকগ্রাউন্ডের ওপর কালো আবছায়া (Overlay) */
+        .home-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.65); /* এটি ছবিকে অন্ধকার করে লেখা ফুটিয়ে তুলবে */
+            z-index: 1;
+        }
+
+        .content-box {
+            position: relative;
+            z-index: 2; /* লেখাকে ছবির ওপরে রাখবে */
+        }
+
+        .home-section img {
+            border-radius: 50%;
+            border: 5px solid #d4af37;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .home-section h1 {
+            font-size: 38px;
+            margin: 10px 0;
+            color: #d4af37;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .home-section p {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* নেভিগেশন মেনু */
+        nav {
+            background: #111;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
         nav a:hover { color: #d4af37; }
 
-        .btn-container { margin-top: 25px; }
-        .btn { background: #d4af37; color: #1a2a6c; padding: 15px 30px; border-radius: 2px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .btn:hover { background: #b8962e; color: white; transform: translateY(-3px); }
+        /* বাটন ডিজাইন */
+        .btn-container { margin-top: 30px; }
+        .btn {
+            background: #d4af37;
+            color: #111;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
 
-        section { padding: 60px 20px; display: flex; justify-content: center; }
-        .card { background: white; padding: 40px; max-width: 650px; width: 100%; border-radius: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; border: 1px solid #ddd; }
-        footer { background: #111; color: #666; text-align: center; padding: 30px; }
+        .btn:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* কন্টাক্ট সেকশন */
+        section { padding: 60px 20px; text-align: center; }
+        .card {
+            background: white;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        footer { background: #111; color: #777; text-align: center; padding: 25px; }
     </style>
 </head>
 <body>
 
 <div class="home-section" id="home">
-    <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
-    <h1>Kawser Ahmed Joy</h1>
-    <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    
-    <div class="btn-container">
-        <a href="about.html" class="btn">আমার পরিচিতি</a>
-        <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
+    <div class="content-box">
+        <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
+        <h1>Kawser Ahmed Joy</h1>
+        <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
+        <p>“জনগণের অধিকার প্রতিষ্ঠায় আপসহীন নেতৃত্ব”</p>
+        
+        <div class="btn-container">
+            <a href="about.html" class="btn">আমার পরিচিতি</a>
+            <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
+        </div>
     </div>
 </div>
 
@@ -45,15 +144,16 @@
 
 <section id="contact">
     <div class="card">
-        <h2 style="color: #1a2a6c;">📞 সরাসরি যোগাযোগ</h2>
-        <p>মোবাইল: <a href="tel:01731168348" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">01731168348</a></p>
-        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Kawser Uddin Joy</a></p>
-        <a href="https://wa.me/8801731168348" class="btn" style="background: #1a2a6c; color: white;" target="_blank">হোয়াটসঅ্যাপ মেসেজ</a>
+        <h2 style="color: #111;">📞 সরাসরি যোগাযোগ</h2>
+        <p>মোবাইল: <a href="tel:01731168348" style="color:#d4af37; font-weight:bold; text-decoration:none;">01731168348</a></p>
+        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="color:#1877F2; font-weight:bold; text-decoration:none;">Kawser Uddin Joy</a></p>
+        <br>
+        <a href="https://wa.me/8801731168348" class="btn" style="background:#25D366; color:white;" target="_blank">হোয়াটসঅ্যাপ মেসেজ</a>
     </div>
 </section>
 
 <footer>
-    © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের উন্নয়ন ও সেবায় নিবেদিত
+    © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের সেবায় নিবেদিত
 </footer>
 
 </body>
