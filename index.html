@@ -5,127 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', Times, serif; /* ক্লাসিক ফন্ট */
-            background-color: #f4f4f4;
-            color: #2c3e50;
-        }
+        body { margin: 0; font-family: 'Times New Roman', serif; background-color: #f4f4f4; color: #2c3e50; }
+        .home-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #1a2a6c, #2a4858); color: white; text-align: center; padding: 20px; }
+        .home-section img { border-radius: 50%; border: 4px solid #d4af37; width: 180px; height: 180px; object-fit: cover; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .home-section h1 { font-size: 42px; margin: 10px 0; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; }
+        
+        nav { background: #111; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #d4af37; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 16px; text-transform: uppercase; }
+        nav a:hover { color: #d4af37; }
 
-        /* প্রফেশনাল ক্লাসিক হেডার */
-        .home-section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* ক্লাসিক নেভি ব্লু গ্রেডিয়েন্ট */
-            background: linear-gradient(135deg, #1a2a6c, #2a4858); 
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+        .btn-container { margin-top: 25px; }
+        .btn { background: #d4af37; color: #1a2a6c; padding: 15px 30px; border-radius: 2px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn:hover { background: #b8962e; color: white; transform: translateY(-3px); }
 
-        .home-section img {
-            border-radius: 50%;
-            border: 4px solid #d4af37; /* সোনালী বর্ডার */
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .home-section h1 {
-            font-size: 42px;
-            margin: 10px 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #d4af37; /* গোল্ডেন কালার */
-        }
-
-        .home-section p {
-            font-size: 20px;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        /* ক্লাসিক ডার্ক মেনু */
-        nav {
-            background: #111;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #d4af37;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: #d4af37;
-        }
-
-        /* কার্ড ডিজাইন */
-        section {
-            padding: 60px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            max-width: 650px;
-            width: 100%;
-            border-radius: 5px; /* ক্লাসিক লুকের জন্য কম রাউন্ড */
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        /* গোল্ডেন ক্লাসিক বাটন */
-        .btn {
-            background: #d4af37;
-            color: #1a2a6c;
-            padding: 15px 40px;
-            border-radius: 2px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 25px;
-            transition: 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn:hover {
-            background: #b8962e;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-
-        footer {
-            background: #111;
-            color: #666;
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-        }
+        section { padding: 60px 20px; display: flex; justify-content: center; }
+        .card { background: white; padding: 40px; max-width: 650px; width: 100%; border-radius: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; border: 1px solid #ddd; }
+        footer { background: #111; color: #666; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
@@ -134,13 +29,16 @@
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     <h1>Kawser Ahmed Joy</h1>
     <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    <p>“আস্থা ও উন্নয়নের অঙ্গীকার”</p>
     
-    <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
+    <div class="btn-container">
+        <a href="about.html" class="btn">আমার পরিচিতি</a>
+        <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
+    </div>
 </div>
 
 <nav>
     <a href="#home">হোম</a>
+    <a href="about.html">পরিচিতি</a>
     <a href="promises.html">প্রতিশ্রুতি</a>
     <a href="#contact">যোগাযোগ</a>
 </nav>
@@ -148,10 +46,8 @@
 <section id="contact">
     <div class="card">
         <h2 style="color: #1a2a6c;">📞 সরাসরি যোগাযোগ</h2>
-        <div class="contact-info">
-            <p>মোবাইল: <a href="tel:01731168348" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">01731168348</a></p>
-            <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Kawser Uddin Joy</a></p>
-        </div>
+        <p>মোবাইল: <a href="tel:01731168348" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">01731168348</a></p>
+        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="text-decoration:none; color:#1a2a6c; font-weight:bold;">Kawser Uddin Joy</a></p>
         <a href="https://wa.me/8801731168348" class="btn" style="background: #1a2a6c; color: white;" target="_blank">হোয়াটসঅ্যাপ মেসেজ</a>
     </div>
 </section>
