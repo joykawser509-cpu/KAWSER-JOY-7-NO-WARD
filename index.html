@@ -5,145 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
-        /* পেজ স্ক্রলিং সুন্দর করার জন্য */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8f9fa; color: #333; }
+
+        /* হেডার ও মেনু */
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #4caf50, #f44336); color: white; }
+        header img { border-radius: 50%; border: 6px solid #fff; width: 180px; height: 180px; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
         
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-        }
+        nav { background: #1a1a1a; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #ddd; margin: 0 10px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: #4caf50; }
 
-        /* হেডার ডিজাইন */
-        header {
-            text-align: center; 
-            padding: 60px 20px; 
-            background: linear-gradient(135deg, #4caf50, #f44336); 
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+        section { padding: 40px 15px; max-width: 900px; margin: 0 auto; }
+        .card { background: white; padding: 30px; margin-bottom: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #4caf50; }
 
-        header img {
-            border-radius: 50%; 
-            margin-bottom: 15px;
-            border: 6px solid rgba(255, 255, 255, 0.8); 
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: transform 0.5s ease;
-        }
+        /* প্রতিশ্রুতি সেকশন স্টাইল */
+        .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .promise-item { background: #fff; padding: 20px; border-radius: 10px; border: 1px solid #eee; transition: 0.3s; text-align: left; position: relative; overflow: hidden; }
+        .promise-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #f44336; }
+        .promise-item h3 { margin: 0 0 10px 0; color: #f44336; font-size: 20px; display: flex; align-items: center; }
+        .promise-item h3 span { background: #f44336; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; }
+        .promise-item p { margin: 0; line-height: 1.5; color: #555; }
+
+        .btn { background: linear-gradient(to right, #006a4e, #009688); color: white; padding: 14px 30px; border-radius: 50px; text-decoration: none; display: inline-block; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 106, 78, 0.4); }
         
-        header img:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        header h1 {
-            margin: 10px 0;
-            font-size: 36px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        /* মেনু ডিজাইন */
-        nav {
-            background: #1a1a1a;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        nav a {
-            color: #ddd;
-            margin: 0 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            transition: 0.3s;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            color: white;
-            background: rgba(255,255,255,0.1);
-        }
-
-        /* সেকশন ডিজাইন */
-        section {
-            padding: 40px 15px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid #4caf50;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-
-        .card h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        /* আকর্ষণীয় বাটন */
-        .btn {
-            background: linear-gradient(to right, #006a4e, #009688);
-            color: white;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 106, 78, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: linear-gradient(to right, #004d38, #006a4e);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 106, 78, 0.5);
-        }
-
-        .whatsapp-btn {
-            background: #25D366 !important;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3) !important;
-        }
-
-        .contact-link {
-            text-decoration: none;
-            color: #1877F2;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        footer {
-            background: #111;
-            color: #888;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
+        footer { background: #111; color: #888; text-align: center; padding: 30px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -151,62 +38,75 @@
 <header id="home">
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     <h1>Kawser Ahmed Joy</h1>
-    <p style="font-weight: bold; letter-spacing: 1px;">৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
+    <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
     <p>“আপনার সেবায়, আপনার পাশে সবসময়”</p>
 </header>
 
 <nav>
     <a href="#home">হোম</a>
     <a href="#about">পরিচিতি</a>
-    <a href="#vision">লক্ষ্য</a>
-    <a href="#plan">পরিকল্পনা</a>
+    <a href="#promises">আমার প্রতিশ্রুতি</a>
     <a href="#contact">যোগাযোগ</a>
 </nav>
 
-<section>
-    <div class="card" id="about">
+<section id="about">
+    <div class="card">
         <h2>👤 আমার পরিচিতি</h2>
-        <p>
-            আমি <strong>Kawser Ahmed Joy</strong>। ৭ নং ওয়ার্ডের জনগণের সেবায় নিয়োজিত একজন তরুণ সমাজসেবক। 
-            আমি বিশ্বাস করি, সততা এবং তারুণ্যের শক্তিই পারে আমাদের সমাজকে বদলে দিতে। 
-            আপনাদের মূল্যবান দোয়া ও সমর্থন নিয়ে আমি এগিয়ে যেতে চাই।
-        </p>
+        <p>আমি <strong>Kawser Ahmed Joy</strong>। ৭ নং ওয়ার্ডের জনগণের সেবায় নিয়োজিত একজন তরুণ সমাজসেবক। আমি বিশ্বাস করি, সততা এবং তারুণ্যের শক্তিই পারে আমাদের সমাজকে বদলে দিতে।</p>
     </div>
+</section>
 
-    <div class="card" id="vision" style="border-left-color: #f44336;">
-        <h2>🎯 আমার লক্ষ্য</h2>
-        <p style="text-align: left; display: inline-block;">
-            ✅ এলাকার নিরাপত্তা ও শান্তি নিশ্চিত করা <br>
-            ✅ উন্নত ড্রেনেজ ও আধুনিক রাস্তাঘাট নির্মাণ <br>
-            ✅ একটি মাদকমুক্ত ও আদর্শ সমাজ গঠন <br>
-            ✅ শিক্ষিত বেকার যুবকদের কর্মসংস্থানে সহযোগিতা
-        </p>
+<section id="promises">
+    <h2 style="text-align:center; color:#2c3e50; margin-bottom:30px;">📋 ৭ নং ওয়ার্ডের সমস্যা ও আমার প্রতিশ্রুতি</h2>
+    <div class="promise-grid">
+        <div class="promise-item">
+            <h3><span>১</span> নিরাপত্তাহীনতা</h3>
+            <p>আইন শৃঙ্খলা জোরদার করে পুরো ওয়ার্ডে নিরাপত্তা নিশ্চিত করা হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>২</span> চাঁদাবাজি</h3>
+            <p>চাঁদাবাজদের বিরুদ্ধে জিরো টলারেন্স নীতি এবং কঠোর ব্যবস্থা গ্রহণ করা হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৩</span> সন্ত্রাসী কার্যক্রম</h3>
+            <p>সন্ত্রাসীদের বিরুদ্ধে সামাজিক প্রতিরোধ ও আইনি ব্যবস্থা সুনিশ্চিত করা হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৪</span> খেলার মাঠ</h3>
+            <p>শিশুদের জন্য খেলার মাঠ সংরক্ষণ ও আধুনিকায়নের উদ্যোগ নেওয়া হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৫</span> দরিদ্রতা</h3>
+            <p>দরিদ্র বিমোচনে সরকারি সুবিধা ও ব্যক্তিগত সহায়তা ঘরে ঘরে পৌঁছে দেওয়া হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৬</span> বেকারত্ব</h3>
+            <p>তরুণদের জন্য দক্ষতা উন্নয়ন ও কর্মসংস্থান কর্মসূচি চালু করা হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৭</span> সুদের সমস্যা</h3>
+            <p>অবৈধ ও শোষণমূলক সুদের কার্যক্রম সম্পূর্ণ বন্ধ করে মানুষকে মুক্ত করা হবে।</p>
+        </div>
+        <div class="promise-item">
+            <h3><span>৮</span> রাস্তাঘাটের সমস্যা</h3>
+            <p>ভাঙা রাস্তা সংস্কার করে নিরাপদ ও সহজ যাতায়াত নিশ্চিত করা হবে।</p>
+        </div>
     </div>
+</section>
 
-    <div class="card" id="plan">
-        <h2>🚀 উন্নয়ন পরিকল্পনা</h2>
-        <p>
-            ৭ নং ওয়ার্ডকে একটি তিলোত্তমা ও ডিজিটাল ওয়ার্ড হিসেবে গড়ে তোলাই আমার প্রধান অঙ্গীকার। 
-            আপনাদের যেকোনো প্রয়োজনে আমি ২৪ ঘণ্টা সেবা প্রদানে প্রতিশ্রুতিবদ্ধ।
-        </p>
-    </div>
-
-    <div class="card" id="contact" style="border-left-color: #1877F2;">
+<section id="contact">
+    <div class="card" style="text-align:center; border-left-color: #1877F2;">
         <h2>📞 যোগাযোগ করুন</h2>
-        <p>সরাসরি কল করুন:</p>
-        <a href="tel:01731168348" class="contact-link" style="color:#006a4e; font-size: 22px;">01731168348</a>
-        
-        <p style="margin-top: 20px;">ফেসবুকে আমি:</p>
-        <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" class="contact-link">Kawser Uddin Joy</a>
-        
+        <p>কল করুন: <a href="tel:01731168348" style="color:#006a4e; font-weight:bold; font-size:20px; text-decoration:none;">01731168348</a></p>
+        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="color:#1877F2; text-decoration:none; font-weight:bold;">Kawser Uddin Joy</a></p>
         <br>
-        <a href="https://wa.me/8801731168348" class="btn whatsapp-btn" target="_blank">💬 হোয়াটসঅ্যাপে মেসেজ দিন</a>
+        <a href="https://wa.me/8801731168348" class="btn" style="background:#25D366;" target="_blank">💬 হোয়াটসঅ্যাপে মেসেজ দিন</a>
     </div>
 </section>
 
 <footer>
     © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের সেবায় নিবেদিত <br>
-    All Rights Reserved
+    স্বচ্ছতা ও উন্নয়নের অঙ্গীকার
 </footer>
 
 </body>
