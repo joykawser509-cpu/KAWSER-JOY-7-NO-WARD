@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
+        /* পেজ স্ক্রলিং সুন্দর করার জন্য */
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -22,7 +27,7 @@
         header img {
             border-radius: 50%; 
             margin-bottom: 15px;
-            border: 4px solid white; /* ছবির চারপাশে সাদা বর্ডার */
+            border: 4px solid white; 
             object-fit: cover;
         }
 
@@ -40,6 +45,9 @@
             background: #222;
             padding: 10px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -47,6 +55,10 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4caf50;
         }
 
         section {
@@ -84,11 +96,17 @@
         .btn:hover {
             background: #004d38;
         }
+
+        .contact-link {
+            text-decoration: none;
+            color: #1877F2;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-<header>
+<header id="home">
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy" width="180" height="180">
     <h1>Kawser Ahmed Joy</h1>
     <p>7 No Ward Councilor Candidate</p>
@@ -96,43 +114,6 @@
 </header>
 
 <nav>
-    <a href="#">হোম</a>
-    <a href="#">আমার পরিচিতি</a>
-    <a href="#">ভিশন</a>
-    <a href="#">উন্নয়ন পরিকল্পনা</a>
-    <a href="#">যোগাযোগ</a>
-</nav>
-
-<section>
-    <div class="card">
-        <h2>আমার পরিচিতি</h2>
-        <p>
-            আমি Kawser Ahmed Joy। ৭ নং ওয়ার্ডের একজন তরুণ সমাজসেবক।
-            জনগণের অধিকার ও উন্নয়নের লক্ষ্যে কাজ করে যাচ্ছি।
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>আমার লক্ষ্য</h2>
-        <p>
-            ✔️ নিরাপত্তা নিশ্চিত করা  
-            ✔️ রাস্তাঘাট উন্নয়ন  
-            ✔️ সুদমুক্ত সমাজ গঠন  
-            ✔️ যুব সমাজকে কর্মসংস্থানে যুক্ত করা
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>যোগাযোগ</h2>
-        <p>মোবাইল: 01XXXXXXXXX</p>
-        <p>ফেসবুক: facebook.com/yourprofile</p>
-        <a href="#" class="btn">যোগাযোগ করুন</a>
-    </div>
-</section>
-
-<footer>
-    © 2026 Kawser Ahmed Joy | All Rights Reserved
-</footer>
-
-</body>
-</html>
+    <a href="#home">হোম</a>
+    <a href="#about">আমার পরিচিতি</a>
+    <a href="#vision">লক্ষ্য</a>
