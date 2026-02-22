@@ -7,15 +7,15 @@
     <style>
         body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; }
 
+        /* ব্যাকগ্রাউন্ড সেকশন */
         .home-section {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* আপনার আপলোড করা বড় নামের ফাইলটি এখানে সেট করা হয়েছে */
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('1771769492142~2.png'); 
+                        url('1771769492142~2.png'); /* আপনার বড় নামের ফাইলটি */
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -32,20 +32,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .home-section h1 { 
-            font-size: 35px; 
-            margin: 10px 0; 
-            color: #d4af37; 
-            text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-        }
-
-        .home-section p {
-            font-size: 20px;
-            margin: 5px 0;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-        }
+        .home-section h1 { font-size: 35px; margin: 10px 0; color: #d4af37; text-transform: uppercase; }
         
+        /* বাটন */
         .btn-container { margin-top: 25px; }
         .btn {
             background: #d4af37;
@@ -60,19 +49,34 @@
         }
         .btn:hover { background: #fff; transform: translateY(-3px); }
 
-        nav { background: #000; padding: 15px 0; text-align: center; border-top: 1px solid #d4af37; }
+        /* নেভিগেশন */
+        nav { background: #000; padding: 15px 0; text-align: center; border-top: 1px solid #d4af37; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 14px; font-weight: bold; }
-        nav a:hover { color: #d4af37; }
+
+        /* যোগাযোগ সেকশন */
+        #contact { padding: 60px 20px; text-align: center; background: #111; }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            max-width: 450px;
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 1px solid #d4af37;
+        }
+        .contact-card h2 { color: #d4af37; margin-bottom: 20px; }
+        .contact-info { margin: 15px 0; font-size: 18px; }
+        .contact-info a { color: #fff; text-decoration: none; }
+
+        footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 13px; }
     </style>
 </head>
 <body>
 
-<div class="home-section">
+<div class="home-section" id="home">
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
-    
     <h1>Kawser Ahmed Joy</h1>
     <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    <p style="font-style: italic; font-size: 16px; opacity: 0.9;">“সিলেটের ঐতিহ্য ও উন্নয়নে প্রতিশ্রুতিবদ্ধ”</p>
+    <p style="font-style: italic; opacity: 0.9;">“সিলেটের ঐতিহ্য ও উন্নয়নে প্রতিশ্রুতিবদ্ধ”</p>
     
     <div class="btn-container">
         <a href="about.html" class="btn">পরিচিতি</a>
@@ -81,10 +85,29 @@
 </div>
 
 <nav>
-    <a href="index.html">হোম</a>
+    <a href="#home">হোম</a>
     <a href="about.html">পরিচিতি</a>
     <a href="promises.html">প্রতিশ্রুতি</a>
+    <a href="#contact">যোগাযোগ</a>
 </nav>
+
+<section id="contact">
+    <div class="contact-card">
+        <h2>📞 সরাসরি যোগাযোগ</h2>
+        <div class="contact-info">
+            মোবাইল: <a href="tel:01731168348">01731168348</a>
+        </div>
+        <div class="contact-info">
+            ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank">Kawser Uddin Joy</a>
+        </div>
+        <br>
+        <a href="https://wa.me/8801731168348" class="btn" style="background:#25D366; color:white; border:none;">হোয়াটসঅ্যাপ মেসেজ</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kawser Ahmed Joy | ৭ নং ওয়ার্ডের সেবায় নিবেদিত
+</footer>
 
 </body>
 </html>
