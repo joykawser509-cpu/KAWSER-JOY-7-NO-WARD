@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
-        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; }
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; scroll-behavior: smooth; }
 
-        /* ব্যাকগ্রাউন্ড সেকশন */
+        /* হোম সেকশন ও ব্যাকগ্রাউন্ড */
         .home-section {
             height: 100vh;
             display: flex;
@@ -15,7 +15,7 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('1771769492142~2.png'); /* আপনার বড় নামের ফাইলটি */
+                        url('1771769492142~2.png'); 
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -34,7 +34,7 @@
 
         .home-section h1 { font-size: 35px; margin: 10px 0; color: #d4af37; text-transform: uppercase; }
         
-        /* বাটন */
+        /* বাটন ডিজাইন */
         .btn-container { margin-top: 25px; }
         .btn {
             background: #d4af37;
@@ -49,9 +49,13 @@
         }
         .btn:hover { background: #fff; transform: translateY(-3px); }
 
-        /* নেভিগেশন */
-        nav { background: #000; padding: 15px 0; text-align: center; border-top: 1px solid #d4af37; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 14px; font-weight: bold; }
+        /* জরুরি নম্বর সেকশন */
+        #emergency { padding: 60px 20px; background: #001a00; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; border: 1px solid #d4af37; }
+        h2 { color: #d4af37; font-size: 24px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border-bottom: 1px solid #333; text-align: left; }
+        th { color: #d4af37; }
 
         /* যোগাযোগ সেকশন */
         #contact { padding: 60px 20px; text-align: center; background: #111; }
@@ -63,11 +67,8 @@
             border-radius: 10px;
             border: 1px solid #d4af37;
         }
-        .contact-card h2 { color: #d4af37; margin-bottom: 20px; }
-        .contact-info { margin: 15px 0; font-size: 18px; }
-        .contact-info a { color: #fff; text-decoration: none; }
 
-        footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 13px; }
+        footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 13px; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
@@ -76,30 +77,34 @@
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     <h1>Kawser Ahmed Joy</h1>
     <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    <p style="font-style: italic; opacity: 0.9;">“সিলেটের ঐতিহ্য ও উন্নয়নে প্রতিশ্রুতিবদ্ধ”</p>
     
     <div class="btn-container">
         <a href="about.html" class="btn">পরিচিতি</a>
         <a href="promises.html" class="btn">প্রতিশ্রুতি</a>
+        <a href="#emergency" class="btn" style="background: #e74c3c; color: white;">জরুরি নম্বর</a>
     </div>
 </div>
 
-<nav>
-    <a href="#home">হোম</a>
-    <a href="about.html">পরিচিতি</a>
-    <a href="promises.html">প্রতিশ্রুতি</a>
-    <a href="#contact">যোগাযোগ</a>
-</nav>
+<section id="emergency">
+    <div class="container">
+        <h2>🚑 সিলেটের জরুরি নম্বরসমূহ</h2>
+        <table>
+            <tr><th>সেবা</th><th>নম্বর</th></tr>
+            <tr><td>জাতীয় জরুরি সেবা</td><td>999</td></tr>
+            <tr><td>সিলেট ফায়ার সার্ভিস</td><td>01322-033595</td></tr>
+            <tr><td>ওসমানী মেডিকেল কলেজ</td><td>01729-454811</td></tr>
+            <tr><td>মেট্রোপলিটন পুলিশ (SMP)</td><td>01320-067699</td></tr>
+            <tr><td>বিদ্যুৎ বিভাগ (বিউবো)</td><td>01755-582305</td></tr>
+        </table>
+        <a href="#home" style="display:inline-block; margin-top:15px; color:#d4af37; text-decoration:none;">↑ ওপরে ফিরে যান</a>
+    </div>
+</section>
 
 <section id="contact">
     <div class="contact-card">
-        <h2>📞 সরাসরি যোগাযোগ</h2>
-        <div class="contact-info">
-            মোবাইল: <a href="tel:01731168348">01731168348</a>
-        </div>
-        <div class="contact-info">
-            ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank">Kawser Uddin Joy</a>
-        </div>
+        <h2 style="color: #d4af37;">📞 সরাসরি যোগাযোগ</h2>
+        <p>মোবাইল: <a href="tel:01731168348" style="color:white; text-decoration:none;">01731168348</a></p>
+        <p>ফেসবুক: <a href="https://www.facebook.com/kawser.uddinjoy" target="_blank" style="color:#d4af37; text-decoration:none;">Kawser Uddin Joy</a></p>
         <br>
         <a href="https://wa.me/8801731168348" class="btn" style="background:#25D366; color:white; border:none;">হোয়াটসঅ্যাপ মেসেজ</a>
     </div>
