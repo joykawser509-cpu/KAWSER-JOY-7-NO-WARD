@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawser Ahmed Joy | 7 No Ward</title>
     <style>
-        body { margin: 0; font-family: 'Times New Roman', serif; background-color: #001a00; color: white; overflow-x: hidden; }
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; }
 
-        /* সিলেটের ঐতিহ্যবাহী চা বাগান থিম */
         .home-section {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-            /* সিলেটের চা বাগানের একটি ব্লারড ইমেজ ব্যাকগ্রাউন্ড */
-            background: linear-gradient(rgba(0, 20, 0, 0.8), rgba(0, 10, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1596408434743-3051086395e9?q=80&w=2070&auto=format&fit=crop');
+            /* আপনার আপলোড করা বড় নামের ফাইলটি এখানে সেট করা হয়েছে */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('1771769492142~2.png'); 
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -26,74 +24,67 @@
 
         .home-section img {
             border-radius: 50%;
-            border: 4px solid #d4af37; /* সোনালী বর্ডার */
-            width: 180px;
-            height: 180px;
+            border: 4px solid #d4af37;
+            width: 170px;
+            height: 170px;
             object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-            z-index: 2;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .home-section h1 {
-            font-size: 40px;
-            margin: 10px 0;
-            color: #d4af37;
+        .home-section h1 { 
+            font-size: 35px; 
+            margin: 10px 0; 
+            color: #d4af37; 
             text-transform: uppercase;
-            letter-spacing: 2px;
-            z-index: 2;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
         }
 
-        .home-section p { font-size: 20px; z-index: 2; opacity: 0.9; }
-
-        /* বাটন ডিজাইন */
-        .btn-container { margin-top: 30px; z-index: 2; }
+        .home-section p {
+            font-size: 20px;
+            margin: 5px 0;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+        
+        .btn-container { margin-top: 25px; }
         .btn {
             background: #d4af37;
-            color: #001a00;
-            padding: 14px 30px;
+            color: #000;
+            padding: 12px 25px;
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
             margin: 10px;
-            transition: 0.3s;
             border-radius: 5px;
-            text-transform: uppercase;
+            transition: 0.3s;
         }
         .btn:hover { background: #fff; transform: translateY(-3px); }
 
-        /* নেভিগেশন */
-        nav { background: #000; padding: 15px 0; text-align: center; border-bottom: 2px solid #d4af37; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav { background: #000; padding: 15px 0; text-align: center; border-top: 1px solid #d4af37; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 14px; font-weight: bold; }
         nav a:hover { color: #d4af37; }
-
-        footer { background: #000; color: #555; text-align: center; padding: 25px; font-size: 14px; }
     </style>
 </head>
 <body>
 
-<div class="home-section" id="home">
+<div class="home-section">
     <img src="20260221_214415.jpg" alt="Kawser Ahmed Joy">
     
     <h1>Kawser Ahmed Joy</h1>
     <p>৭ নং ওয়ার্ড কাউন্সিলর পদপ্রার্থী</p>
-    <p style="font-style: italic; font-size: 18px;">“৩৬০ আউলিয়ার পুণ্যভূমি সিলেটের সেবায় নিবেদিত”</p>
+    <p style="font-style: italic; font-size: 16px; opacity: 0.9;">“সিলেটের ঐতিহ্য ও উন্নয়নে প্রতিশ্রুতিবদ্ধ”</p>
     
     <div class="btn-container">
-        <a href="about.html" class="btn">আমার পরিচিতি</a>
-        <a href="promises.html" class="btn">আমার প্রতিশ্রুতি</a>
+        <a href="about.html" class="btn">পরিচিতি</a>
+        <a href="promises.html" class="btn">প্রতিশ্রুতি</a>
     </div>
 </div>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="about.html">About</a>
-    <a href="promises.html">Promises</a>
+    <a href="index.html">হোম</a>
+    <a href="about.html">পরিচিতি</a>
+    <a href="promises.html">প্রতিশ্রুতি</a>
 </nav>
-
-<footer>
-    © 2026 Kawser Ahmed Joy | সিলেটের ঐতিহ্য ও উন্নয়নের অগ্রপথিক
-</footer>
 
 </body>
 </html>
